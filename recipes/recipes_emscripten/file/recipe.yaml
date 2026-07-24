@@ -47,12 +47,13 @@ outputs:
                   - share/misc/magic.mgc
                   - lib/pkgconfig/libmagic.pc
                   - lib/libmagic.a
+                  {% if target_platform != "emscripten-wasm32" %}
                   - lib/libmagic.so
+                  {% endif %}
           - script: python-magic
             requirements:
               run:
                 - python-magic
-
     about:
       summary: Implementation of the file(1) command
       license: BSD-2-Clause-Darwin
