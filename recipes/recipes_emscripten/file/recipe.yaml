@@ -47,9 +47,9 @@ outputs:
                   - share/misc/magic.mgc
                   - lib/pkgconfig/libmagic.pc
                   - lib/libmagic.a
-{% if target_platform != "emscripten-wasm32" %}                  
+{% if target_platform != "emscripten-wasm32" %}
                   - lib/libmagic.so
-{% endif %}                  
+{% endif %}
           - script: python-magic
             requirements:
               run:
